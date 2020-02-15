@@ -15,6 +15,12 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -51,5 +57,22 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
+
+	<!--other repositories if any
+	<repositories>
+		<repository>
+			<id>project.local</id>
+			<name>repo.local</name>
+			<url>file:${project.basedir}/repo</url>
+		</repository>
+	</repositories>
+	-->
+	<distributionManagement>
+		<repository>
+			<id>project.local</id>
+			<name>repo.local</name>
+			<url>file:///tmp/my-app/</url>
+		</repository>
+	</distributionManagement>
 
 </project>
